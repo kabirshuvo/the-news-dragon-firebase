@@ -33,13 +33,13 @@ const Header = () => {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action1">About</Nav.Link>
-            <Nav.Link href="#action1">Carrer</Nav.Link>
+            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="#action3">Carrer</Nav.Link>
             
             
           </Nav>
           <img className='me-4' src="" alt="UserImg" />
-          <Button variant="outline-success">Login</Button>
+          <Button  variant="outline-success">Login</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
