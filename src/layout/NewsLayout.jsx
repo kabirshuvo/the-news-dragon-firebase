@@ -1,25 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import { Col, Container, Row } from "react-bootstrap";
+import { Outlet } from 'react-router-dom';
 import Footer from "../pages/Shared/Footer/Footer";
 import Header from "../pages/Shared/Header/Header";
-import LeftNavBar from '../pages/Shared/LeftNavBar/LeftNavBar';
 import RightNavBar from '../pages/Shared/RightNavBar/RightNavBar';
-import { Outlet } from 'react-router-dom';
 
-function App() {
-
-  return (
-    <div className="App">
+const NewsLayout = () => {
+    return (
+        <div>
+            
      <Header></Header>
 
     <Container>
      <Row>
-        <Col lg={3}>
-
-            <LeftNavBar></LeftNavBar>
-
-        </Col>
-        <Col lg={6}>
+       
+        <Col lg={9}>
           
           <Outlet></Outlet>
           
@@ -33,8 +29,9 @@ function App() {
     </Container>
 
      <Footer></Footer>
-    </div>
-  )
-}
+   
+        </div>
+    );
+};
 
-export default App;
+export default NewsLayout;

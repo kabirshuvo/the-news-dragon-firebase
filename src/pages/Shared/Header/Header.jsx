@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Marquee from "react-fast-marquee";
 const Header = () => {
     return (
-        <Container>
+        <Container className='my-4'>
            <div className="text-center">
                 <h3>The header Section</h3>
                 <h3>Logo will be here/ or this is logo</h3>

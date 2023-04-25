@@ -21,7 +21,7 @@ const LeftNavBar = () => {
        {
             categories.map(category => <h6 key={category.id}>
 
-                <Link className='text-decoration-none'>{category.name}</Link>
+                <Link to={`/category/${category.id}`} className='text-decoration-none'>{category.name}</Link>
             </h6>)
         }
 
