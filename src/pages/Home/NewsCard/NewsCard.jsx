@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NewsCard = ({news}) => {
     const {_id, title, details, thumbnail_url, image_url} = news;
@@ -12,7 +13,7 @@ const NewsCard = ({news}) => {
           <blockquote className="blockquote mb-0">
             <p>
               {' '}
-              {details}
+              {details.length < 250 ? <>{details}</> : <>{details.slice(0, 250)} ... <Link to={`/news/${_id}`}><Button>Read More</Button></Link></>}
               {' '}
             </p>
             <footer className="blockquote-footer">
