@@ -1,12 +1,14 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({news}) => {
-    const {_id, title, details, thumbnail_url, image_url} = news;
+    const {_id, title, details, image_url, author} = news;
 
     return (
         <Card>
+             
+        <Card.Header><Image style={{width: '3rem'}} src={author.img} roundedCircle /> {author.name}</Card.Header>
         <Card.Header>{title}</Card.Header>
         <Card.Img variant="top" src={image_url} />
         <Card.Body>
