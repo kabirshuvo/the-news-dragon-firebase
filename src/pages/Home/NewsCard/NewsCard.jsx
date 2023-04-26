@@ -40,15 +40,15 @@ const NewsCard = ({news}) => {
             </footer>
           </blockquote>
         </Card.Body>
-        <Card.Footer className='d-flex text-muted'>
+        <Card.Footer className='d-flex text-muted align-items-center'>
 
           <div className='flex-grow-1'>
             <span> <Rating
   placeholderRating={rating?.number}
   emptySymbol={<FaRegStar></FaRegStar>}
-  placeholderSymbol={<FaStar></FaStar>}
-  fullSymbol={<FaStar></FaStar>}
-/> </span>
+  placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+  fullSymbol={<FaStar className='text-warning'></FaStar>}
+/> {rating?.number}</span>
           </div>
           
           <div>

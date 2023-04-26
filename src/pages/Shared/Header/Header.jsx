@@ -5,13 +5,13 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Marquee from "react-fast-marquee";
+import userImg from '../../../assets/1.png';
+import logo from '../../../assets/logo.png';
 const Header = () => {
     return (
         <Container className='my-4'>
            <div className="text-center">
-                <h3>The header Section</h3>
-                <h3>Logo will be here/ or this is logo</h3>
-                <img src="" alt="" />
+                <img src={logo} alt="The news Dragon Logo" />
                 <p><small>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</small></p>
            </div>
            <div className='d-flex'>
@@ -38,7 +38,7 @@ const Header = () => {
             
             
           </Nav>
-          <img className='me-4' src="" alt="UserImg" />
+          <img className='me-4' style={{height:'3rem'}} src={userImg} alt="UserImg" />
           <Button  variant="outline-success">Login</Button>
         </Navbar.Collapse>
       </Container>
