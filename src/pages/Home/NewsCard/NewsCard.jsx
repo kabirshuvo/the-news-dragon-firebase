@@ -1,6 +1,7 @@
 import moment from 'moment/moment';
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
+import { FaBookmark, FaShareAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({news}) => {
@@ -9,15 +10,18 @@ const NewsCard = ({news}) => {
     return (
         <Card >
              
-        <Card.Header className='d-flex'>
+        <Card.Header className='d-flex align-items-center'>
           
             <Image style={{height: '3rem'}} src={author?.img} roundedCircle /> 
         
-            <div className='d-flex flex-column ps-2'>
+            <div className='d-flex flex-column ps-2 flex-grow-1'>
                 <p className='mb-0'>{author?.name}</p>
                 <p > {moment(author?.published_date).format('Do MMM YYYY')}</p>
             </div>
-        
+            <div>
+              <FaBookmark></FaBookmark> <FaShareAlt></FaShareAlt>
+              
+            </div>
         
         </Card.Header>
         <Card.Img variant="top" src={image_url} />
