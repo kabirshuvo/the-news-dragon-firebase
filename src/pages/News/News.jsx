@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import EditorInsights from '../EditorsInsights/EditorInsights';
 
 const News = () => {
     const news = useLoaderData();
-    const {_id, title, details, image_url, author, rating, total_view} = news;
+    const {_id, title, details, image_url, author, rating, total_view, category_id} = news;
     return (
         <>
         <Card>
@@ -12,12 +13,13 @@ const News = () => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {details}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Link to={`/category/${category_id}`}><Button variant="danger">Read All news of this category</Button></Link>
         </Card.Body>
       </Card>
+
+      <EditorInsights/>
       </>
     );
 };
