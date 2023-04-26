@@ -1,11 +1,12 @@
 import moment from 'moment/moment';
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
-import { FaBookmark, FaShareAlt } from "react-icons/fa";
+import { FaBookmark, FaRegEye, FaRegStar, FaShareAlt, FaStar } from "react-icons/fa";
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({news}) => {
-    const {_id, title, details, image_url, author,} = news;
+    const {_id, title, details, image_url, author, rating, total_view} = news;
 
     return (
         <Card >
@@ -39,7 +40,22 @@ const NewsCard = ({news}) => {
             </footer>
           </blockquote>
         </Card.Body>
-        <Card.Footer>{title}</Card.Footer>
+        <Card.Footer className='d-flex text-muted'>
+
+          <div className='flex-grow-1'>
+            <span> <Rating
+  placeholderRating={rating?.number}
+  emptySymbol={<FaRegStar></FaRegStar>}
+  placeholderSymbol={<FaStar></FaStar>}
+  fullSymbol={<FaStar></FaStar>}
+/> </span>
+          </div>
+          
+          <div>
+          <FaRegEye></FaRegEye>
+          <span> {total_view}</span>
+          </div>
+          </Card.Footer>
       </Card>
     );
 };
