@@ -9,6 +9,7 @@ import userImg from '../../../assets/1.png';
 import logo from '../../../assets/logo.png';
 const Header = () => {
     return (
+      
         <Container className='my-4'>
            <div className="text-center">
                 <img src={logo} alt="The news Dragon Logo" />
@@ -25,6 +26,7 @@ const Header = () => {
            <Navbar bg="light" expand="lg">
         <Container fluid>
         
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -38,9 +40,20 @@ const Header = () => {
             
             
           </Nav>
+
+
           <img className='me-4' style={{height:'3rem'}} src={userImg} alt="UserImg" />
+
+
+
+
           <Button  variant="outline-success">Login</Button>
+
+
+
         </Navbar.Collapse>
+
+        
       </Container>
     </Navbar>
            </div>
