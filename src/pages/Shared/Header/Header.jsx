@@ -6,7 +6,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import userImg from "../../../assets/1.png";
 import logo from "../../../assets/logo.png";
 const Header = () => {
   return (
@@ -42,12 +41,12 @@ const Header = () => {
                 <Nav.Link href="#action3">Carrer</Nav.Link>
               </Nav>
 
-              <img
+              {/* {user && <img
                 className="me-4"
                 style={{ height: "3rem" }}
                 src={userImg}
                 alt="UserImg"
-              />
+              />} */}
 
               <Button variant="outline-success">Login</Button>
             </Navbar.Collapse>
