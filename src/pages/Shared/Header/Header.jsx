@@ -55,7 +55,11 @@ const userDispName = user.displayName;
 
 <Nav.Link className="me-4">{userDispName}</Nav.Link>
               </div>
-              <Button variant="outline-success">Login</Button>
+              {user ? 
+              <Button variant="outline-success">LogOut</Button> :
+              <Link to={'/login'}><Button variant="outline-success">Login</Button></Link>
+            
+            }
             </Navbar.Collapse>
           </Container>
         </Navbar>
