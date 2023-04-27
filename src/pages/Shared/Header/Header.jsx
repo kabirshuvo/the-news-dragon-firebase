@@ -1,5 +1,5 @@
 import moment from "moment";
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
@@ -7,10 +7,18 @@ import Navbar from "react-bootstrap/Navbar";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import { AuthContext } from "../../../providers/AuthProvider";
 const Header = () => {
+
+const {user} = useContext(AuthContext);
+
+const userDispName = user.displayName;
+
+
   return (
     <Container className="my-4">
       <div className="text-center">
+        <p>{userDispName}</p>
         <img src={logo} alt="The news Dragon Logo" />
         <p>
           <small>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</small>
