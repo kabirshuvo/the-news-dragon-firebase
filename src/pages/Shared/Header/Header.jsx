@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Marquee from "react-fast-marquee";
+import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -49,13 +50,11 @@ const userDispName = user.displayName;
                 <Nav.Link href="#action3">Carrer</Nav.Link>
               </Nav>
 
-              {/* {user && <img
-                className="me-4"
-                style={{ height: "3rem" }}
-                src={userImg}
-                alt="UserImg"
-              />} */}
+              <div className="text-center">
+              {user && <FaUserCircle className="me-4"></FaUserCircle>}
 
+<Nav.Link className="me-4">{userDispName}</Nav.Link>
+              </div>
               <Button variant="outline-success">Login</Button>
             </Navbar.Collapse>
           </Container>
