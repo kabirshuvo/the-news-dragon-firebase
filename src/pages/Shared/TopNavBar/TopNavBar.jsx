@@ -6,7 +6,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 const TopNavBar = () => {
 
     const {user} = useContext(AuthContext);
-    const userDispName = user.displayName;
+    
 
     return (
         <Container>
@@ -29,7 +29,7 @@ const TopNavBar = () => {
               <div className="text-center">
                 {user && <FaUserCircle className="me-4"></FaUserCircle>}
 
-                <Nav.Link className="me-4">{userDispName}</Nav.Link>
+                <Nav.Link className="me-4">{}</Nav.Link>
               </div>
               {user ? (
                 <Button variant="outline-success">LogOut</Button>
