@@ -1,11 +1,12 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom';
 import App from '../layout/App';
+import LogInLayout from '../layout/LogInLayout';
 import NewsLayout from '../layout/NewsLayout';
 import Category from '../pages/Home/Category/Category';
 import Login from '../pages/LogIn/LogInpage';
 import News from '../pages/News/News';
-import LogInLayout from '../layout/LogInLayout';
 import Registration from '../pages/Registration/Registration';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
         children:[
             {
                 path: ':id',
-                element:<News></News>,
+                element:<PrivateRoute><News></News></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`) 
             }
         ]
