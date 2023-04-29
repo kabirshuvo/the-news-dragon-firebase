@@ -16,12 +16,12 @@ function App() {
 
     <Container>
      <Row>
-        <Col lg={3}>
+        <Col lg={2}>
 
             <LeftNavBar></LeftNavBar>
 
         </Col>
-        <Col lg={6}>
+        <Col lg={7}>
           
           <Outlet></Outlet>
           
