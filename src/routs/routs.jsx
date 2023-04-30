@@ -6,6 +6,7 @@ import Category from '../pages/Home/Category/Category';
 import Login from '../pages/LogIn/LogInpage';
 import News from '../pages/News/News';
 import Registration from '../pages/Registration/Registration';
+import TermsAndConditions from '../pages/Shared/TermsAndConditions/TermsAndConditions';
 import PrivateRoute from './PrivateRoute';
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Registration></Registration>
+            },
+            {
+                path: 'terms',
+                element: <TermsAndConditions></TermsAndConditions>
             }
         ]
     },
