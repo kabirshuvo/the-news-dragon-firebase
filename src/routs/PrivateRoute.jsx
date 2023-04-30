@@ -3,7 +3,7 @@ import { Spinner } from 'react-bootstrap';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
-const PrivateRoute = ({Children}) => {
+const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation();
 
@@ -14,7 +14,7 @@ const PrivateRoute = ({Children}) => {
         }
 
         if(user){
-        return Children;
+        return children;
     }
     return <Navigate state={{from: location}} to='/login' replace></Navigate>;
 };
